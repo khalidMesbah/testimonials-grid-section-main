@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  display: grid;
+  font-size: 13px;
+  place-content: center;
+  padding: 20px;
+}
+.testimonials {
+  max-width: 1440px;
+  margin: 100px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+.testimonial {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: #0003 0 48px 100px 0;
+  margin-bottom: 10px;
+  .person {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 3px solid hsl(0, 0%, 81%);
+      margin-right: 15px;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2px;
+      .name {
+        font-size: 15px;
+      }
+      .status {
+        opacity: 0.5;
+      }
+    }
+  }
+  article {
+    p {
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+    q {
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.4;
+      opacity: 0.7;
+    }
+  }
+  &-1 {
+    .person {
+      img {
+        border: 3px solid hsl(263, 45%, 62%);
+      }
+    }
+  }
+  &-4 {
+    .person {
+      img {
+        border: 3px solid hsl(263, 55%, 52%);
+      }
+    }
+  }
+}
+.testimonial-1 {
+  background-color: hsl(263, 55%, 52%);
+  color: #fff;
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top 0 right 100px; // new info
+  grid-column: 1/3;
+}
+.testimonial-2 {
+  background-color: hsl(217, 19%, 35%);
+  color: #fff;
+}
+.testimonial-3 {
+  background-color: hsl(0, 0%, 100%);
+  grid-row: 2;
+  color: hsl(219, 29%, 14%);
+}
+.testimonial-4 {
+  background-color: hsl(219, 29%, 14%);
+  color: #fff;
+  grid-column: 2/4;
+}
+.testimonial-5 {
+  color: hsl(219, 29%, 14%);
+  grid-row: 1/ 3;
+  grid-column: 4;
+  background-color: hsl(0, 0%, 100%);
+}
+
+footer {
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+// media queries
+
+@media (max-width: 768px) {
+  .testimonials {
+    grid-template-columns: 1fr;
+    .testimonial {
+      grid-column: initial;
+      grid-row: initial;
+    }
+  }
+}
